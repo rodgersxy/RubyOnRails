@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   # GET /about
   get "about", to: "about#index"
 
+
+  # GET / sign_up
+  get "sign_up", to: "registration#new"
+
   # GET /main
   root to: "main#index"
 
