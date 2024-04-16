@@ -1,24 +1,59 @@
-# README
+# cheatsheet for rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
+## commands for creating first rails app
+```
+rails new scheduled_tweets
+```
+## bundle command for checking gems / installing gems
+```
+bundle
+```
+## command for starting rails server
 
-* Configuration
+```
+rails server or rails s
+```
+## MVC - model view controller
 
-* Database creation
+GET  /about HTTP/1.1
+Host : localhost 127.0.0.1
 
-* Database initialization
+## Routes
+matches for URLS that is requested
+GET for "/about"
+-- i see you have requested "/about", i we'll give that for the about-controller to handle
 
-* How to run the test suite
+## Models
+This is a database wrapper
+Users
+- query for records
+- wrap individual records
 
-* Services (job queues, cache servers, search engines, etc.)
+## Views 
+your response body content
+- HTML
+- CSV
+- PDF 
+- XML
+This is what you get to the browser when you request 
 
-* Deployment instructions
+## Controllers
+Decides how to process a request and define a response
 
-* ...
+## command for creating a model
+```
+rails generate model User email:string password_digest:string
+```
+## command for migrate
+```
+rails db:migrate
+```
+
+## command after modifying the model
+rails db:rollback
+
+## command for migrating the model
+rails db:migrate
