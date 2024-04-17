@@ -6,5 +6,6 @@
 class User < ApplicationRecord
     has_secure_password
 
-    validates :email, :presence => true, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, message: "Must be a valid email format" }
+    # A more permissive email format regex
+    validates :email, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP, message: "Must be a valid email format" }
 end

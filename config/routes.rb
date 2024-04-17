@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   # GET / sign_up
   get "sign_up", to: "registration#new"
 
+  post "sign_up", to: "registration#create"
+
   # GET /main
   root to: "main#index"
 
