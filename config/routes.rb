@@ -7,8 +7,14 @@ Rails.application.routes.draw do
 
   # GET / sign_up
   get "sign_up", to: "registration#new"
-
   post "sign_up", to: "registration#create"
+
+  # GET / sign_in
+  get "sign_in", to: "sessions#new"
+  post "sign_in", to: "sessions#create"
+
+  # logout
+  delete "logout", to: "sessions#destroy"
 
   # GET /main
   root to: "main#index"
